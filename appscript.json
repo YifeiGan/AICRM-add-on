@@ -1,0 +1,33 @@
+{
+  "timeZone": "America/Los_Angeles",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/script.locale",
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/gmail.addons.current.message.readonly",
+    "https://www.googleapis.com/auth/gmail.addons.current.action.compose",
+    "https://www.googleapis.com/auth/gmail.addons.execute"
+  ],
+  "addOns": {
+    "common": {
+      "name": "AICRM",
+      "logoUrl": "https://media.licdn.com/dms/image/v2/D560BAQHQ7R9ssWQ_Zg/company-logo_200_200/company-logo_200_200/0/1694458549399/carbonbridge_logo?e=2147483647&v=beta&t=p2JbNWYm3Dp0Eevw_vfROcpH3TS6s-j6QF7vNiRa7Jo",
+      "layoutProperties": {
+        "primaryColor": "#FFA500" 
+      },
+      "homepageTrigger": {
+        "runFunction": "buildHomepage"
+      }
+    },
+    "gmail": {
+      "contextualTriggers": [
+        {
+          "unconditional": {},
+          "onTriggerFunction": "buildAddOn"
+        }
+      ]
+    }
+  }
+}
